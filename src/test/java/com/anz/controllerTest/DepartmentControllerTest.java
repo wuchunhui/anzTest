@@ -40,8 +40,9 @@ public class DepartmentControllerTest {
 	public void searcheDepartment() {
 		try {
 			mockMvc.perform(
-					MockMvcRequestBuilders.get("/v1/department/1")
+					MockMvcRequestBuilders.get("/v1/department")
 							.characterEncoding("UTF-8")
+							.param("id", "1")
 							.accept(MediaType.APPLICATION_JSON))
 					.andExpect(MockMvcResultMatchers.status().is(200))
 					.andExpect(

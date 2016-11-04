@@ -31,12 +31,11 @@ public class DepartmentController {
 		return returnMsg;
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ReturnMsg getEmployeeByID(@PathVariable("id") Long id,
+	@RequestMapping(value = "", method = RequestMethod.GET)
+	public ReturnMsg getEmployeeByID(
 			@ModelAttribute Department department) {
 		ReturnMsg returnMsg = new ReturnMsg();
 		try {
-			department.setId(id);
 			returnMsg.setData(departmentService.searchDepartment(department));
 		} catch (Exception e) {
 			e.printStackTrace();
