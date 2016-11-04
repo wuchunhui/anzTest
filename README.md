@@ -1,16 +1,16 @@
 # anzTest
- ANZ-TechCD-JavaEE-Developer-Question-C
- ===
- Documentation
- --
+## ANZ-TechCD-JavaEE-Developer-Question-C
+
+### Documentation
+
     This projec bulid restFul with springMVC+spring+mybatis on maven.
     I denfinition the return type for this api
     example:{"code":200,"message":null,"data":[{"id":"1".....},{"id":"2"....}]}
     {"code":500,"message":"name must be not null ","data":null}
     This return type throws the exception to user.
     
- requirements
- --
+ ###requirements
+
  1.Retrieve all the departments
     http://ip:port/ANTTEST/v1/department   method="get"
  2.Retrieve one department by departmentId
