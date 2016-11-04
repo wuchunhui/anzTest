@@ -40,8 +40,9 @@ public class EmployeeControllerTest {
 	public void searcheEmployee() {
 		try {
 			mockMvc.perform(
-					MockMvcRequestBuilders.get("/v1/employee/1")
+					MockMvcRequestBuilders.get("/v1/employee")
 							.characterEncoding("UTF-8")
+							.param("id", "1")
 							.accept(MediaType.APPLICATION_JSON))
 					.andExpect(MockMvcResultMatchers.status().is(200))
 					.andExpect(
