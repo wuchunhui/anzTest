@@ -9,7 +9,7 @@
     {"code":500,"message":"name must be not null ","data":null}
     This return type throws the exception to user.
     Run the ANZ_QUESTION_C_SQL.sql  can Initialise the database.
-    RUN mvn install  can Build the deployable .war file. I also push the .war
+    RUN mvn install  can Build the deployable .war file. 
     
     
     
