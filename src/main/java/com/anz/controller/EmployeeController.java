@@ -46,12 +46,12 @@ public class EmployeeController {
 		return returnMsg;
 	}
 
-	@RequestMapping(value = "/{id}", method = RequestMethod.PUT)
-	public ReturnMsg updateEmployeeByID(@PathVariable("id") Long id,
+	@RequestMapping(value = "", method = RequestMethod.PUT)
+	public ReturnMsg updateEmployeeByID(
 			@ModelAttribute Employee employee) {
 		ReturnMsg returnMsg = new ReturnMsg();
 		try {
-			employee.setId(id);
+			
 			employeeService.updateEmployee(employee);
 		} catch (Exception e) {
 			e.printStackTrace();
