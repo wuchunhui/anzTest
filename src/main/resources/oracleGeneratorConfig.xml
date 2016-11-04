@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+	PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+	"http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<context id="mysqlTables" targetRuntime="MyBatis3">
+		<!-- -->
+		<plugin type="org.mybatis.generator.plugins.CaseInsensitiveLikePlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<!-- 取消注释 -->
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://120.27.31.119:3306/test?useUnicode=true&amp;characterEncoding=UTF-8"
+			userId="root"   
+			password="fyx82haoling">  
+		</jdbcConnection>
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+		<javaModelGenerator targetPackage="com.anz.mybatis.generator.model"
+			targetProject="MAVEN">
+			<property name="enableSubPackages" value="true" />
+		</javaModelGenerator>
+		<sqlMapGenerator targetPackage="com.anz.mybatis.generator.dao"
+			targetProject="MAVEN">
+			<property name="enableSubPackages" value="true" />
+		</sqlMapGenerator>
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.anz.mybatis.generator.dao" targetProject="MAVEN">
+			<property name="enableSubPackages" value="true" />
+		</javaClientGenerator>
+
+
+
+
+		<!-- 用户相关开始 -->
+		<table tableName="employee"  domainObjectName="Employee">
+		</table>
+		<table tableName="department"  domainObjectName="Department">
+		</table>
+		<!-- 用户相关结束 -->
+
+
+	</context>
+</generatorConfiguration>
